@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar'
-import { View } from 'react-native'
+import { View, Text} from 'react-native'
 import AppLoading from 'expo-app-loading'
 import 'react-native-gesture-handler'
 

@@ -18,6 +18,7 @@ import { Button } from '../../components/Button'
 
 import { styles } from './styles';
 import { theme } from '../../theme';
+import { Copyright } from '../Copyright';
 
 
 interface Props {
@@ -93,7 +94,7 @@ export function Form({ feedbackType, onFeedbackCanceled, onFeedbackSent }: Props
       <TextInput 
         multiline
         style={styles.input}
-        placeholder='Teve uma ideia de melhoria ou de nova funcionalidade? conte pra gente!'
+        placeholder={feedbackTypeInfo.placeholder}
         placeholderTextColor={theme.colors.text_secondary}
         autoCorrect={false}
         onChangeText={setComment}
@@ -111,6 +112,8 @@ export function Form({ feedbackType, onFeedbackCanceled, onFeedbackSent }: Props
           isLoading={isSendingFeedback}
         />
       </View>
+
+      <Copyright />
     </View>
   );
 }

@@ -4,7 +4,7 @@ import { theme } from '../../theme';
 export const styles = StyleSheet.create({
   container: {
     width: 40,
-    height: 40 ,
+    height: 40,
     borderRadius: 4,
     backgroundColor: theme.colors.surface_secondary,
     justifyContent: 'center',
@@ -21,7 +21,8 @@ export const styles = StyleSheet.create({
 
   image: {
     width: 40,
-    height: 40 ,
+    height: 40,
+    borderRadius: 4,
   }
 
 });

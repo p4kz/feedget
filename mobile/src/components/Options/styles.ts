@@ -8,15 +8,15 @@ export const styles = StyleSheet.create({
 
   options: {
     width: '100%',
-    marginBottom: 48,
+    marginBottom: 50,
     flexDirection: 'row',
     justifyContent: 'center',
-
   },
 
   title: {
     fontSize: 20,
-    marginBottom: 32,
+    marginTop: 16,
+    marginBottom: 20,
     fontFamily: theme.fonts.medium,
     color: theme.colors.text_primary
   }

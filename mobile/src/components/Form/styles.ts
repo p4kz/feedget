@@ -33,6 +33,7 @@ export const styles = StyleSheet.create({
   },
 
   input: {
+    textAlignVertical: 'top',
     height: 112,
     padding: 12,
     marginBottom: 8,
@@ -42,10 +43,9 @@ export const styles = StyleSheet.create({
     color: theme.colors.text_primary,
     fontFamily: theme.fonts.regular
   },
-
+ 
   footer: {
     flexDirection: 'row',
-    marginBottom: 16,
-  }
-
+    marginBottom: 10,
+  },
 });

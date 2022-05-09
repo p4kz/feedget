@@ -5,7 +5,7 @@ import ideaImageUrl from '../../assets/idea.svg'
 import thoughtImageUrl from '../../assets/thought.svg'
 import { FeedbackTypeStep } from "./Steps/FeedbackTypeStep"
 import { FeedbackContentStep } from "./Steps/FeedbackContentStep"
-import { FeedbackSuccesStep } from "./Steps/FeedbackSuccessStep"
+import { FeedbackSuccessStep } from "./Steps/FeedbackSuccessStep"
 
 export const feedbackTypes = {
   BUG: {
@@ -13,21 +13,24 @@ export const feedbackTypes = {
     image:{
       source: bugImageUrl,
       alt: 'Imagem de um inseto'
-    }
+    },
+    placeholder: 'Algo não está funcionando bem? Queremos corrigir. Conte com detalhes o que está acontecendo...'
   },
   IDEA: {
     title: 'Ideia',
     image:{
       source: ideaImageUrl,
       alt: 'Imagem de uma lâmpada'
-    }
+    },
+    placeholder: 'Teve uma ideia de melhoria ou de nova funcionalidade? Conta pra gente!'
   },
   OTHER: {
     title: 'Outro',
     image:{
       source: thoughtImageUrl,
       alt: 'Imagem de um balão de pensamento'
-    }
+    },
+    placeholder: 'Queremos te ouvir. O que você gostaria de nos dizer?'
   }
 }
 
@@ -46,16 +49,16 @@ export function WidgetForm() {
     <div className="bg-zinc-900 p-4 relative rounded-2xl mb-4 flex flex-col items-center shadow-lg w-[calc(100vw-2rem)] md:w-auto">
 
       {feedbackSent ? (
-        <FeedbackSuccesStep onFeedbackRestartRequested={handleRestartFeedback}/> 
+        <FeedbackSuccessStep onFeedbackRestartRequested={handleRestartFeedback}/> 
       ) : (
         <>
           {!feedbackType ? (
             <FeedbackTypeStep onFeedbackTypeChange={setFeedbackType}/>
           ) : (
             <FeedbackContentStep 
-            feedbackType={feedbackType} 
-            onFeedbackRestartRequested={handleRestartFeedback}
-            onFeedbackSent={() => setFeedbackSent(true)}
+              feedbackType={feedbackType} 
+              onFeedbackRestartRequested={handleRestartFeedback}
+              onFeedbackSent={() => setFeedbackSent(true)}
             />
           )}
         </>
